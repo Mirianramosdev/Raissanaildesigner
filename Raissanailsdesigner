@@ -201,11 +201,10 @@
         <option value="Manutenção">Manutenção</option>
         <option value="Postiça Realista">Postiça Realista</option>
         <option value="Remoção">Remoção</option>
-  
- <option value="Reconstrução">Reconstrução de unhas do pé</option>
-<option value="Reconstrução">Esmaltação em Gel (Pé)</option>
-<option value="Reconstrução">Blindagem</option>
-      </select>
+        <option value="Reconstrução">Reconstrução de unhas do pé</option>
+        <option value="Esmaltação em gel (Pé)">Esmaltação em Gel (Pé)</option>
+        <option value="Blindagem">Blindagem</option>
+ </select>
 
       <button type="submit">Confirmar Agendamento</button>
     </form>
