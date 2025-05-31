@@ -216,7 +216,7 @@
       event.preventDefault();
       const nome = document.getElementById('nome').value;
       const data = document.getElementById('data').value;
-      const hora = document.getElementById('hora').value;
+     const hora = document.getElementById('horario').value;
       const procedimento = document.getElementById('procedimento').value;
       const telefone = document.getElementById('telefone').value;
 
