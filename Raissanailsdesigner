@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+  <title>Raissa Nail Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      color: #D9B030;
+      text-align: center;
+      padding: 30px 20px 20px;
+    }
+
+    header img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #D9B038;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .agendamento {
+      background-color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .agendamento h2 {
+      color: #bfa76f;
+      margin-bottom: 20px;
+    }
+
+    .agendamento form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .agendamento input,
+    .agendamento select,
+    .agendamento button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .agendamento button {
+      background-color: #8B690D;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #D9B030;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .servicos ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .servicos li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .sobre {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .instagram,
+    .localizacao {
+      text-align: center;
+    }
+
+    .instagram a {
+      color: #D9B030;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+
+    footer {
+      background-color: #D9B030;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <img src="https://i.postimg.cc/4xPztxYP/IMG-4444.png" alt="Logomarca Raissa Ribeiro" />
+    <p>Alongamentos de Alto Padrão</p>
+    
+  </header>
+
+  <!-- Agendamento -->
+  <section class="agendamento">
+    <h1>Agende seu horário</h1>
+    <form onsubmit="enviarWhatsApp(event)">
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="horario">Horário:</label>
+<select id="horario" name="horario" required>
+  <option value="">Selecione um horário</option>
+  <option value="08:30">08:30</option>
+  <option value="10:30">10:30</option>
+  <option value="13:30">13:30</option>
+  <option value="15:30">15:30</option>
+  <option value="17:30">17:30</option>
+  <option value="19:30">19:30</option>
+</select>
+    
+
+      <label for="nome">Nome da Cliente:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="telefone">WhatsApp da Cliente:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 99999-9999" required>
+
+      <label for="procedimento">Procedimento:</label>
+      <select id="procedimento" name="procedimento" required>
+        <option value="">Selecione</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+        <option value="Alongamento de Unhas">Alongamento de Unhas</option>
+        <option value="Decoração">Decoração</option>
+        <option value="Manutenção">Manutenção</option>
+        <option value="Postiça Realista">Postiça Realista</option>
+        <option value="Remoção">Remoção</option>
+  
+ <option value="Reconstrução">Reconstrução de unhas do pé</option>
+<option value="Reconstrução">Esmaltação em Gel (Pé)</option>
+<option value="Reconstrução">Blindagem</option>
+      </select>
+
+      <button type="submit">Confirmar Agendamento</button>
+    </form>
+  </section>
+
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const data = document.getElementById('data').value;
+      const hora = document.getElementById('hora').value;
+      const procedimento = document.getElementById('procedimento').value;
+      const telefone = document.getElementById('telefone').value;
+
+      const mensagem = `Olá, Raíssa! Gostaria de agendar um horário:\n\n🧍‍♀️ Nome: ${nome}\n📅 Data: ${data}\n🕒 Hora: ${hora}\n💅 Procedimento: ${procedimento}\n📱 WhatsApp da Cliente: ${telefone}`;
+      const numeroRaissa = "5579998907871";
+      const url = `https://wa.me/${numeroRaissa}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+  <img src="https://i.postimg.cc/3xnSvGft/Story-instagram-agenda-aberta-est-tica-minimalista-zip-1.png" alt="Procedimentos 1" />
+
+  <!-- Galeria -->
+  <section>
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <img src="https://i.postimg.cc/1XQM9YgY/13003a05-f621-4017-892d-01fa7a211c53.jpg" alt="Unha decorada 1" />
+      <img src="https://i.postimg.cc/jjBZ1jRT/29451d5e-e3de-40cc-b639-df91c37e7cba.jpg" alt="Unha decorada 2" />
+      <img src="https://i.postimg.cc/prJCyYzV/7c68f463-ccf3-493c-b34b-1164bd0d7406.jpg" alt="Unha decorada 3" />
+      <img src="https://i.postimg.cc/vm40XnFX/91447065-8d8d-4815-8540-76b6c21ac3af.jpg" alt="Unha decorada 4" />
+      <img src="https://i.postimg.cc/XJFQ60vC/ba49b8d7-3777-4dcd-a01e-dcf469014df1.jpg" alt="Unha decorada 5" />
+      <img src="https://i.postimg.cc/qRCZB31g/d7946088-4316-4629-9666-5c5bb0e402ff.jpg" alt="Unha decorada 6" />
+    </div>
+<!-- Cursos Disponíveis -->
+<section class="cursos-disponiveis" style="text-align:center; padding: 40px 20px;">
+  <h2 style="color:#D9B030;">Cursos Disponíveis</h2>
+  <img src=" https://i.postimg.cc/26npnmcH/Curso-manicure-prospectar-clientes-moderno-branco-dourado-story-zip-1.png" alt="Curso Disponível" style="max-width: 300px; width: 100%; border-radius: 10px; margin: 20px auto; display: block;" />
+  <a href="https://wa.me/5579998907871?text=Olá%20Raíssa%2C%20gostaria%20de%20me%20inscrever%20no%20curso%20disponível." 
+     target="_blank"
+     style="display: inline-block; background-color: #D9B038; color: #fff; padding: 12px 25px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+    Inscreva-se
+  </a>
+</section>
+
+  <!-- Serviços -->
+  <section class="servicos">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Manicure e Pedicure</li>
+      <li>Alongamento em Gel</li>
+      <li>Decoração Artística</li>
+      <li>Design Personalizado</li>
+    </ul>
+  </section>
+
+  <!-- Sobre -->
+  <section class="sobre">
+    <h2>Sobre</h2>
+    <p>Raissa é especialista em unhas decoradas, com anos de experiência e paixão por transformar mãos em obras de arte. Atendimento personalizado e foco em qualidade.</p>
+  </section>
+
+  <!-- Instagram -->
+  <section class="instagram">
+    <h2>Instagram</h2>
+    <p>Acompanhe nossos trabalhos:
+      <a href="https://www.instagram.com/_raissanaildesign?igsh=MTFid3c2cnByNTZyeg==" target="_blank">@_raissanaildesign</a>
+    </p>
+  </section>
+
+  <!-- Localização -->
+  <section class="localizacao">
+    <h2>AVISO</h2>
+    <p>Em caso de Cancelamento do agendemento, pagará 30% do valor do procedimento agendado</p>
+    <iframe 
+  src="https://www.google.com/maps?q=Praça+Helena+de+Oliveira+Ribeiro,+Salgado,+SE&output=embed" 
+  width="100%" 
+  height="300" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <h3>&copy; 2025 Raissa Nail Designer — Todos os direitos reservados | Site desenvolvido por MR | Soluções Criativas em Web</h3>
+  </footer>
+
+</body>
+</html>
